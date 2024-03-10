@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "canvas": "^2.11.2",
+    "canvas-pixels": "^0.0.0",
+    "pngjs": "^7.0.0"
+  }
+}
