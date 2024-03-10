@@ -72,7 +72,7 @@ class Quadtree {
     _getError(imageData, boundingBox) {
         let totalError = 0;
         const averageColor = this._getAverageColor(imageData, boundingBox);
-        
+
         for (let x = boundingBox.x; x < boundingBox.x + boundingBox.width; x++) {
             for (let y = boundingBox.y; y < boundingBox.y + boundingBox.height; y++) {
                 const index = (y * this.width + x) * 4;
@@ -128,8 +128,8 @@ async function main() {
     ctx.drawImage(image, 0, 0, image.width, image.height);
     const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
-    const maxDepth = 7; 
-    const errorThreshold = 30; 
+    const maxDepth = 6; 
+    const errorThreshold = 35; 
     // Convert Image to Quadtree
     const quadtree = new Quadtree(imageData, maxDepth, errorThreshold);
     // Convert the quadtree to an image
